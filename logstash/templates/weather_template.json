@@ -1,0 +1,59 @@
+{
+  "index_patterns": ["weather-data-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "measurement_time_iso": {
+          "type": "date",
+          "format": "strict_date_optional_time"
+        },
+        "measurement_timestamp_ms": {
+          "type": "long"
+        },
+        "city": {
+          "type": "keyword"
+        },
+        "country": {
+          "type": "keyword"
+        },
+        "temperature": {
+          "type": "float"
+        },
+        "feels_like": {
+          "type": "float"
+        },
+        "humidity": {
+          "type": "integer"
+        },
+        "pressure": {
+          "type": "integer"
+        },
+        "weather_main": {
+          "type": "keyword"
+        },
+        "weather_description": {
+          "type": "text"
+        },
+        "wind_speed": {
+          "type": "float"
+        },
+        "wind_direction": {
+          "type": "integer"
+        },
+        "cloudiness": {
+          "type": "integer"
+        },
+        "visibility": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
